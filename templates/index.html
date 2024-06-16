@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Banking Homepage</title>
+    <title>Banking Dashboard</title>
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='style.css') }}"
@@ -16,47 +16,92 @@
   <body>
     <div class="banking-container">
       <header>
-        <h1>Welcome to Your Bank</h1>
+        <h1>Welcome to Security Dashboard</h1>
         <nav>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Accounts</a></li>
-            <li><a href="#">Transfers</a></li>
+            <li><a href="#">Users</a></li>
+            <li><a href="#">Alerts</a></li>
             <li><a href="#">Settings</a></li>
           </ul>
         </nav>
       </header>
       <main>
-        <h2>Your Account Summary</h2>
-        <div class="account-details">
-          <div class="balance">
-            <h3>Account Balance</h3>
-            <p>$10,000.00</p>
-          </div>
-          <div class="transactions">
-            <h3>Recent Transactions</h3>
-            <ul class="transaction-list">
-              <li>
-                <span class="transaction-date">2024-06-15</span>
-                <span class="transaction-description">Online Payment</span>
-                <span class="transaction-amount">$50.00</span>
-              </li>
-              <li>
-                <span class="transaction-date">2024-06-14</span>
-                <span class="transaction-description">ATM Withdrawal</span>
-                <span class="transaction-amount">$100.00</span>
-              </li>
-              <!-- Additional transactions can be dynamically added here -->
+        <div class="panels-custom">
+          <!-- Users Panel -->
+          <div class="users-panel">
+            <h2>All Users</h2>
+            <ul class="user-list">
+              <!-- Mock users -->
+              <li><a href="#" data-userid="1">John Doe</a></li>
+              <li><a href="#" data-userid="2">Jane Smith</a></li>
+              <li><a href="#" data-userid="3">Mike Johnson</a></li>
+              <li><a href="#" data-userid="1">Mary Lee</a></li>
+              <li><a href="#" data-userid="2">John Doe</a></li>
+              <li><a href="#" data-userid="3">Jason Rushmore</a></li>
+
+              <!-- Add more mock users as needed -->
             </ul>
           </div>
+          <!-- Account Details Panel -->
+          <div class="account-details-panel" id="account-details-panel">
+            <h2>User Account Details</h2>
+            <div class="user-account-details">
+              <!-- Details dynamically populated based on selected user -->
+              <h3 id="user-name">John Doe</h3>
+              <div class="account-summary">
+                <h4>Account Balance</h4>
+                <p id="account-balance">Rs 10,000.00</p>
+              </div>
+              <div class="recent-transactions">
+                <h4>Recent Transactions</h4>
+                <ul id="transaction-list" class="transaction-list">
+                  <li>
+                    <span class="transaction-date">2024-06-15</span>
+                    <span class="transaction-description">Online Payment</span>
+                    <span class="transaction-amount">Rs 50.00</span>
+                  </li>
+                  <li>
+                    <span class="transaction-date">2024-06-14</span>
+                    <span class="transaction-description">ATM Withdrawal</span>
+                    <span class="transaction-amount">Rs 100.00</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Fraud Alerts Panel -->
+        <div class="fraud-alerts-panel" id="fraud-alerts-panel">
+          <h2>Fraud Alerts</h2>
+          <ul class="fraud-alerts-list">
+            <!-- Mock fraud alerts -->
+            <li>
+              <a href="#" data-transactionid="1">
+                <span class="alert-date">2024-06-15</span>
+                <span class="alert-description"
+                  >Fraudulent Activity Detected</span
+                >
+                <span class="alert-user">John Doe</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" data-transactionid="2">
+                <span class="alert-date">2024-06-14</span>
+                <span class="alert-description">Suspicious Transaction</span>
+                <span class="alert-user">Jane Smith</span>
+              </a>
+            </li>
+
+            <!-- More mock alerts can be added -->
+          </ul>
         </div>
       </main>
     </div>
 
     <div class="extension-container" id="extension-container">
-      <h2>Apateron Fraud Detection</h2>
+      <h2>APATERON</h2>
       <form id="uploadForm" enctype="multipart/form-data">
-        <label for="file">Upload CSV File:</label>
+        <label for="file">Dataset</label>
         <input type="file" id="file" name="file" accept=".csv" required /><br />
         <button type="submit">Upload</button>
       </form>
@@ -65,6 +110,9 @@
       <div id="result"></div>
     </div>
 
+    <!-- JavaScript for handling user clicks and loading data -->
     <script src="{{ url_for('static', filename='extension_script.js') }}"></script>
+    <script src="{{ url_for('static', filename='dashboard_script.js') }}"></script>
+    <!-- New script for dashboard functionality -->
   </body>
 </html>

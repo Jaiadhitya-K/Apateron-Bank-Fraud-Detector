@@ -10,7 +10,7 @@ body {
     width: 350px;
     max-height: calc(100vh - 100px); /* Adjust max-height as necessary */
     overflow-y: auto; /* Enable vertical scrolling */
-    background-color: #ffffff;
+    background-color: #222222;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     padding: 20px;
@@ -21,8 +21,8 @@ body {
 
 .extension-container h2 {
     text-align: center;
-    font-size: 1.5em;
-    color: #333;
+    font-size: 3em;
+    color: white;
 }
 
 .extension-container form {
@@ -33,16 +33,16 @@ body {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #555;
+    color: white;
 }
 
 .extension-container input[type="file"] {
     display: block;
     margin-bottom: 20px;
     padding: 8px;
-    border: 1px solid #ccc;
+    background-color: white;
     border-radius: 4px;
-    width: 100%;
+    width: 95%;
     font-size: 1em;
 }
 
