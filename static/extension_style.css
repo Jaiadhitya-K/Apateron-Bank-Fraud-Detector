@@ -1,0 +1,90 @@
+/* extension_style.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.extension-container {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    width: 350px;
+    max-height: calc(100vh - 100px); /* Adjust max-height as necessary */
+    overflow-y: auto; /* Enable vertical scrolling */
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    z-index: 1000;
+    display: none; /* Hidden initially, shown when triggered */
+}
+
+
+.extension-container h2 {
+    text-align: center;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.extension-container form {
+    margin-bottom: 20px;
+}
+
+.extension-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.extension-container input[type="file"] {
+    display: block;
+    margin-bottom: 20px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 1em;
+}
+
+.extension-container button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #00b300;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.extension-container button:hover {
+    background-color: black;
+}
+
+#result {
+    margin-top: 20px;
+}
+
+.transaction-tile {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.transaction-tile:hover {
+    background-color: #f1f1f1;
+}
+
+.transaction-details {
+    display: none; /* Hidden initially, shown when tile is clicked */
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+    background-color: #fff;
+}
