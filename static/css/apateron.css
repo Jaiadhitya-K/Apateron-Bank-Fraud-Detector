@@ -1,21 +1,19 @@
-/* extension_style.css */
 body {
     font-family: Arial, sans-serif;
 }
 
 .extension-container {
-    position: fixed;
-    top: 50px;
-    right: 50px;
-    width: 350px;
+
     max-height: calc(100vh - 100px); /* Adjust max-height as necessary */
     overflow-y: auto; /* Enable vertical scrolling */
-    background-color: #222222;
+    background-color: #27ae60; /* Kaspersky-like green color */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     padding: 20px;
+    cursor: move;
+    user-select: none; 
     z-index: 1000;
-    display: none; /* Hidden initially, shown when triggered */
+    transition: height 0.3s ease-out;
 }
 
 
@@ -50,8 +48,8 @@ body {
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: #00b300;
-    color: #ffffff;
+    background-color:white;
+    color: #27ae60; /* Kaspersky-like green color */;
     border: none;
     border-radius: 4px;
     font-size: 1em;
@@ -87,4 +85,44 @@ body {
     border-top: 1px solid #ddd;
     margin-top: 10px;
     background-color: #fff;
+}
+
+
+
+
+.file-upload-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #4B6584;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.custom-file-upload {
+    margin-top: 5px;
+
+}
+
+.file-upload-container:hover {
+    background-color: black;
+}
+
+.custom-file-upload i {
+    margin-right: 5px;
+}
+
+#filenameDisplay {
+    margin-left: 10px;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+    
 }

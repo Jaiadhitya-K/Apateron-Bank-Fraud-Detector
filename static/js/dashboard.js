@@ -45,4 +45,3 @@ const users = [
       populateUserDetails(userId);
     });
   });
-  

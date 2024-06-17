@@ -1,4 +1,4 @@
-  body {
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f4f4;
   }
@@ -7,47 +7,10 @@
   .banking-container {
     width: 100%;
     max-width: 1800px;
-    margin: 20px auto;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    padding: 20px;
   }
   
-  /* Header */
-  header {
-    background-color: #007bff;
-    padding: 15px 20px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-  }
-  
-  header h1 {
-    color: #fff;
-    font-size: 24px;
-  }
-  
-  /* Navigation */
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li {
-    display: inline-block;
-    margin-right: 20px;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-  }
-  
-  nav ul li a:hover {
-    color: #fff;
-  }
   
   /* Main content */
   main {
@@ -211,4 +174,3 @@
       margin-right: 0;
     }
   }
-  

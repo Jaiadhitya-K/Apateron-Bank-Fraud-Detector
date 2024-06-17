@@ -1,0 +1,99 @@
+{% extends "base.html" %} {% block content %}
+<div class="banking-container">
+  <main>
+    <div class="panels-custom">
+      <!-- Users Panel -->
+      <div class="users-panel">
+        <h2>All Users</h2>
+        <ul class="user-list">
+          <!-- Mock users -->
+          <li><a href="#" data-userid="1">John Doe</a></li>
+          <li><a href="#" data-userid="2">Jane Smith</a></li>
+          <li><a href="#" data-userid="3">Mike Johnson</a></li>
+          <li><a href="#" data-userid="1">Mary Lee</a></li>
+          <li><a href="#" data-userid="2">John Doe</a></li>
+          <li><a href="#" data-userid="3">Jason Rushmore</a></li>
+
+          <!-- Add more mock users as needed -->
+        </ul>
+      </div>
+      <!-- Account Details Panel -->
+      <div class="account-details-panel" id="account-details-panel">
+        <h2>User Account Details</h2>
+        <div class="user-account-details">
+          <!-- Details dynamically populated based on selected user -->
+          <h3 id="user-name">John Doe</h3>
+          <div class="account-summary">
+            <h4>Account Balance</h4>
+            <p id="account-balance">Rs 10,000.00</p>
+          </div>
+          <div class="recent-transactions">
+            <h4>Recent Transactions</h4>
+            <ul id="transaction-list" class="transaction-list">
+              <li>
+                <span class="transaction-date">2024-06-15</span>
+                <span class="transaction-description">Online Payment</span>
+                <span class="transaction-amount">Rs 50.00</span>
+              </li>
+              <li>
+                <span class="transaction-date">2024-06-14</span>
+                <span class="transaction-description">ATM Withdrawal</span>
+                <span class="transaction-amount">Rs 100.00</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="extension-container" id="extension-container">
+        <h2>APATERON</h2>
+        <form id="uploadForm" enctype="multipart/form-data">
+          <label for="file">Dataset</label>
+          <div class="file-upload-container">
+            <label for="file" class="custom-file-upload">
+              <i class="fa fa-cloud"></i> Attach CSV File
+            </label>
+            <input
+              type="file"
+              id="file"
+              name="file"
+              accept=".csv"
+              required
+              style="display: none"
+              onchange="updateFileName(this)"
+            />
+            <span id="filenameDisplay"></span>
+          </div>
+          <button type="submit">Upload</button>
+        </form>
+        <button id="startSimulation" disabled>Start Simulation</button>
+        <button id="stopSimulation" disabled>Stop Simulation</button>
+        <div id="result"></div>
+      </div>
+    </div>
+    <!-- Fraud Alerts Panel -->
+    <div class="fraud-alerts-panel" id="fraud-alerts-panel">
+      <h2>Fraud Alerts</h2>
+      <ul class="fraud-alerts-list">
+        <!-- Mock fraud alerts -->
+        <li>
+          <a href="#" data-transactionid="1">
+            <span class="alert-date">2024-06-15</span>
+            <span class="alert-description">Fraudulent Activity Detected</span>
+            <span class="alert-user">John Doe</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" data-transactionid="2">
+            <span class="alert-date">2024-06-14</span>
+            <span class="alert-description">Suspicious Transaction</span>
+            <span class="alert-user">Jane Smith</span>
+          </a>
+        </li>
+
+        <!-- More mock alerts can be added -->
+      </ul>
+    </div>
+  </main>
+</div>
+
+{% endblock %}
