@@ -39,19 +39,14 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/orders")
-def orders():
-    return render_template("orders.html")
-
-
-@app.route("/sales")
-def sales():
-    return render_template("sales.html")
-
-
 @app.route("/apateron")
 def apateron():
     return render_template("apateron.html")
+
+
+@app.route("/stimulator")
+def stimulator():
+    return render_template("stimulator.html")
 
 
 @app.route("/upload", methods=["POST"])

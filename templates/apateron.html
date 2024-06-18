@@ -2,26 +2,17 @@
 <div class="banking-container">
   <main>
     <div class="panels-custom">
-      <!-- Users Panel -->
       <div class="users-panel">
         <h2>All Users</h2>
         <ul class="user-list">
-          <!-- Mock users -->
           <li><a href="#" data-userid="1">John Doe</a></li>
           <li><a href="#" data-userid="2">Jane Smith</a></li>
           <li><a href="#" data-userid="3">Mike Johnson</a></li>
-          <li><a href="#" data-userid="1">Mary Lee</a></li>
-          <li><a href="#" data-userid="2">John Doe</a></li>
-          <li><a href="#" data-userid="3">Jason Rushmore</a></li>
-
-          <!-- Add more mock users as needed -->
         </ul>
       </div>
-      <!-- Account Details Panel -->
       <div class="account-details-panel" id="account-details-panel">
         <h2>User Account Details</h2>
         <div class="user-account-details">
-          <!-- Details dynamically populated based on selected user -->
           <h3 id="user-name">John Doe</h3>
           <div class="account-summary">
             <h4>Account Balance</h4>
@@ -44,56 +35,28 @@
           </div>
         </div>
       </div>
-      <div class="extension-container" id="extension-container">
-        <h2>APATERON</h2>
-        <form id="uploadForm" enctype="multipart/form-data">
-          <label for="file">Dataset</label>
-          <div class="file-upload-container">
-            <label for="file" class="custom-file-upload">
-              <i class="fa fa-cloud"></i> Attach CSV File
-            </label>
-            <input
-              type="file"
-              id="file"
-              name="file"
-              accept=".csv"
-              required
-              style="display: none"
-              onchange="updateFileName(this)"
-            />
-            <span id="filenameDisplay"></span>
-          </div>
-          <button type="submit">Upload</button>
-        </form>
-        <button id="startSimulation" disabled>Start Simulation</button>
-        <button id="stopSimulation" disabled>Stop Simulation</button>
-        <div id="result"></div>
+
+      <div class="fraud-alerts-panel">
+        <h2>Fraud Alerts</h2>
+        <ul class="fraud-alerts-list">
+          <!-- Fraud alerts go here -->
+        </ul>
       </div>
     </div>
-    <!-- Fraud Alerts Panel -->
-    <div class="fraud-alerts-panel" id="fraud-alerts-panel">
-      <h2>Fraud Alerts</h2>
-      <ul class="fraud-alerts-list">
-        <!-- Mock fraud alerts -->
-        <li>
-          <a href="#" data-transactionid="1">
-            <span class="alert-date">2024-06-15</span>
-            <span class="alert-description">Fraudulent Activity Detected</span>
-            <span class="alert-user">John Doe</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" data-transactionid="2">
-            <span class="alert-date">2024-06-14</span>
-            <span class="alert-description">Suspicious Transaction</span>
-            <span class="alert-user">Jane Smith</span>
-          </a>
-        </li>
 
-        <!-- More mock alerts can be added -->
-      </ul>
+    <!-- Real-time Transactions -->
+    <div class="realtime-transactions">
+      <h2>Real-time Transactions</h2>
+      <ul class="realtime-transactions-list"></ul>
     </div>
   </main>
+</div>
+
+<div id="transactionModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
 </div>
 
 {% endblock %}
