@@ -42,6 +42,28 @@
           <a href="/apateron"><i class="fas fa-shield-alt"></i> Apateron</a>
         </li>
       </ul>
+      <div class="extension-container" id="extension-container">
+        <form id="uploadForm" enctype="multipart/form-data">
+          <div class="file-upload-container">
+            <label for="file" class="custom-file-upload">
+              <i class="fa fa-cloud"></i> Attach CSV File
+            </label>
+            <input
+              type="file"
+              id="file"
+              name="file"
+              accept=".csv"
+              required
+              style="display: none"
+              onchange="updateFileName(this)"
+            />
+            <span id="filenameDisplay"></span>
+          </div>
+          <button type="submit">Upload</button>
+        </form>
+        <button id="startSimulation" disabled>Start Simulation</button>
+        <button id="stopSimulation" disabled>Stop Simulation</button>
+      </div>
     </div>
     <div class="main-content" id="content">
       <div class="navbar">
@@ -57,29 +79,8 @@
           <img src="https://via.placeholder.com/40" alt="User" />
         </div>
       </div>
+
       {% block content %} {% endblock %}
-    </div>
-    <div class="extension-container" id="extension-container">
-      <form id="uploadForm" enctype="multipart/form-data">
-        <div class="file-upload-container">
-          <label for="file" class="custom-file-upload">
-            <i class="fa fa-cloud"></i> Attach CSV File
-          </label>
-          <input
-            type="file"
-            id="file"
-            name="file"
-            accept=".csv"
-            required
-            style="display: none"
-            onchange="updateFileName(this)"
-          />
-          <span id="filenameDisplay"></span>
-        </div>
-        <button type="submit">Upload</button>
-      </form>
-      <button id="startSimulation" disabled>Start Simulation</button>
-      <button id="stopSimulation" disabled>Stop Simulation</button>
     </div>
 
     <!-- Include scripts -->

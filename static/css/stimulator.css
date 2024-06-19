@@ -8,9 +8,8 @@
     user-select: none; 
     z-index: 1000;
     transition: height 0.3s ease-out;
-    position: absolute;
-    top: 65vh;
-    right: 170vh;
+    position: relative;
+    left: 1vh;
     width: 20vh;
     
 }
