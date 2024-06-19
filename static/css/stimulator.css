@@ -8,16 +8,11 @@
     user-select: none; 
     z-index: 1000;
     transition: height 0.3s ease-out;
-    position: fixed;
-    top: 70vh;
-    right: 155vh;
+    position: absolute;
+    top: 65vh;
+    right: 170vh;
+    width: 20vh;
     
-}
-
-.extension-container h2 {
-    text-align: center;
-    font-size: 3em;
-    color: white;
 }
 
 .extension-container form {
@@ -66,6 +61,7 @@
 
 .file-upload-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     background-color: #4B6584;
@@ -90,7 +86,6 @@
 }
 
 #filenameDisplay {
-    margin-left: 10px;
     font-size: 14px;
     text-align: center;
     color: white;
