@@ -1,19 +1,27 @@
+/* Global Styles */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
 }
 
-/* Banking container */
+.header {
+  background-color: #27ae60;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .banking-container {
   width: 100%;
   max-width: 1800px;
+  margin: 0 auto;
   background-color: #fff;
   border-radius: 8px;
-}
-
-/* Main content */
-main {
-  margin-top: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .panels-custom {
@@ -22,7 +30,6 @@ main {
   margin-top: 20px;
 }
 
-/* Panels */
 .users-panel,
 .account-details-panel,
 .fraud-alerts-panel {
@@ -44,7 +51,6 @@ main {
   margin-bottom: 15px;
 }
 
-/* User List */
 .user-list {
   list-style-type: none;
   padding: 0;
@@ -66,7 +72,6 @@ main {
   color: #007bff;
 }
 
-/* Account Details */
 .user-account-details {
   padding: 20px;
 }
@@ -91,6 +96,8 @@ main {
 .transaction-list {
   list-style-type: none;
   padding: 0;
+  max-height: 300px;
+  overflow-y: auto;
 }
 
 .transaction-list li {
@@ -110,10 +117,11 @@ main {
   font-weight: bold;
 }
 
-/* Fraud Alerts */
 .fraud-alerts-list {
   list-style-type: none;
   padding: 0;
+  max-height: 300px;
+  overflow-y: auto;
 }
 
 .fraud-alerts-list li {
@@ -148,7 +156,6 @@ main {
   background-color: #c82333;
 }
 
-/* Real-time Transactions */
 .realtime-transactions {
   flex: 1;
 }
@@ -163,6 +170,8 @@ main {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  max-height: 300px;
+  overflow-y: auto;
 }
 
 .realtime-transactions-list li {
@@ -191,7 +200,7 @@ main {
 }
 
 .details-button {
-  background-color:white;
+  background-color: white;
   color: black;
   border: none;
   padding: 10px 15px;
@@ -199,7 +208,6 @@ main {
   cursor: pointer;
 }
 
-/* The Modal (background) */
 .modal {
   display: none;
   position: fixed;
@@ -210,11 +218,10 @@ main {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* Modal Content */
 .modal-content {
   background-color: #fefefe;
   margin: auto;
@@ -225,7 +232,6 @@ main {
   border-radius: 8px;
 }
 
-/* The Close Button */
 .close {
   color: #aaa;
   float: right;
@@ -240,18 +246,68 @@ main {
   cursor: pointer;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  list-style-type: none;
+  padding: 0;
+}
 
-/* Responsive Design */
+.pagination .page-item {
+  margin: 0 5px;
+}
+
+.pagination .page-link {
+  display: block;
+  padding: 10px 15px;
+  color:white;
+  text-decoration: none;
+  background-color: #27ae60;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.pagination .page-link:hover {
+  background-color: #27ae60;
+  color:white;
+}
+
+.pagination .page-prev,
+.pagination .page-next {
+  color: white;
+  border-radius: 10px;
+}
+
+.start-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-left: 20px;
+}
+
+.start-button:hover {
+  background-color: #0056b3;
+}
+
+
+
 @media (max-width: 768px) {
-  main {
-      flex-direction: column;
+  .panels-custom {
+    flex-direction: column;
   }
 
-  .users-panel, .account-details-panel, .fraud-alerts-panel {
-      margin-bottom: 20px;
-  }
-
-  .users-panel {
-      margin-right: 0;
+  .users-panel,
+  .account-details-panel,
+  .fraud-alerts-panel {
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 }

@@ -1,0 +1,34 @@
+{% extends "base.html" %} {% block content %}
+<h1>Welcome to Shopify Admin</h1>
+<div class="overview">
+  <div class="metric">
+    <h2>Total Sales</h2>
+    <p id="total-sales">$0</p>
+  </div>
+  <div class="metric">
+    <h2>Orders</h2>
+    <p id="total-orders">0</p>
+  </div>
+  <div class="metric">
+    <h2>Customers</h2>
+    <p id="total-customers">0</p>
+  </div>
+</div>
+
+<div class="recent-orders">
+  <h2>Recent Orders</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Order ID</th>
+        <th>Amount</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody id="recent-orders-body">
+      <!-- Orders will be dynamically inserted here -->
+    </tbody>
+  </table>
+  <div id="pagination-controls"></div>
+</div>
+{% endblock %}

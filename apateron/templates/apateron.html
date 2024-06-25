@@ -1,4 +1,9 @@
 {% extends "base.html" %} {% block content %}
+<div class="header">
+  <h1><i class="fas fa-shield-alt"></i> Apateron Dashboard</h1>
+</div>
+<button id="start-button" class="start-button">Start Real-time Updates</button>
+
 <div class="banking-container">
   <main>
     <div class="panels-custom">
@@ -21,17 +26,9 @@
           <div class="recent-transactions">
             <h4>Recent Transactions</h4>
             <ul id="transaction-list" class="transaction-list">
-              <li>
-                <span class="transaction-date">2024-06-15</span>
-                <span class="transaction-description">Online Payment</span>
-                <span class="transaction-amount">Rs 50.00</span>
-              </li>
-              <li>
-                <span class="transaction-date">2024-06-14</span>
-                <span class="transaction-description">ATM Withdrawal</span>
-                <span class="transaction-amount">Rs 100.00</span>
-              </li>
+              <!-- Transaction items -->
             </ul>
+            <div class="pagination" id="transaction-pagination"></div>
           </div>
         </div>
       </div>
@@ -41,6 +38,7 @@
         <ul class="fraud-alerts-list">
           <!-- Fraud alerts go here -->
         </ul>
+        <div class="pagination" id="fraud-alerts-pagination"></div>
       </div>
     </div>
 
@@ -48,6 +46,7 @@
     <div class="realtime-transactions">
       <h2>Real-time Transactions</h2>
       <ul class="realtime-transactions-list"></ul>
+      <div class="pagination" id="realtime-transactions-pagination"></div>
     </div>
   </main>
 </div>
@@ -58,5 +57,4 @@
     <div class="modal-body" id="modalBody"></div>
   </div>
 </div>
-
 {% endblock %}

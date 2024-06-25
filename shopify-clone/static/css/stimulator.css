@@ -1,17 +1,11 @@
 .extension-container {
-
     background-color: #313131;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     padding: 20px;
-    cursor: move;
-    user-select: none; 
-    z-index: 1000;
-    transition: height 0.3s ease-out;
     position: relative;
     left: 1vh;
     width: 20vh;
-    
 }
 
 .extension-container form {
@@ -26,7 +20,8 @@
     color: white;
 }
 
-.extension-container input[type="file"] {
+.extension-container input[type="file"],
+.extension-container input[type="number"] {
     display: block;
     margin-bottom: 20px;
     padding: 8px;
@@ -40,7 +35,7 @@
     display: block;
     width: 100%;
     padding: 10px;
-    background-color:white;
+    background-color: white;
     color: #313131;
     border: none;
     border-radius: 4px;
@@ -54,10 +49,6 @@
     background-color: rgb(184, 181, 181);
 }
 
-
-
-
-
 .file-upload-container {
     display: flex;
     flex-direction: column;
@@ -67,13 +58,11 @@
     padding: 10px 12px;
     margin-bottom: 10px;
     transition: all 0.3s ease-in-out;
-
     border-radius: 4px;
 }
 
 .custom-file-upload {
     margin-top: 5px;
-
 }
 
 .file-upload-container:hover {
@@ -91,6 +80,16 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    
-    
+}
+
+
+/* Adjust the width of the container to accommodate the new elements */
+.extension-container {
+    width: 22vh;
+}
+
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }

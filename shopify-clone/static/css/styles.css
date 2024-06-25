@@ -184,21 +184,22 @@ ul {
     width: 200px;
     height: 50px;
 }
-
-/* extension_style.css */
-
-.extension-container {
-    position: fixed;
-    top: 50px;
-    right: 50px;
-    width: 350px;
-    max-height: calc(100vh - 100px); /* Adjust max-height as necessary */
-    overflow-y: auto; /* Enable vertical scrolling */
-    background-color: #222222;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    padding: 20px;
-    z-index: 1000;
-    display: none; /* Hidden initially, shown when triggered */
+.pagination {
+    margin-top: 20px;
+    text-align: center;
 }
 
+.pagination button {
+    background-color:#4B6584;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: default;
+}
